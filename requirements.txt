@@ -1,4 +1,4 @@
 requests
 ollama 
-fastapi
+fastapi[standard]
 langchain 
