@@ -1,7 +1,7 @@
 # 실습 : image to text
 from ollama import chat
 
-IMAGE_PATH = "imgs/img01.jpg"
+IMAGE_PATH = "imgs/img03.jpg"
 MODEL_NAME = "gemma4:e4b"
 
 response = chat(

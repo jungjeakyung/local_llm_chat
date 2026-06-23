@@ -16,7 +16,7 @@ class UserResponse(BaseModel):
     name: str
     avatar_url: Optional[HttpUrl] = None
 
-
+cd
 @app.get("/")
 def hello():
     return "Hello, World!"
@@ -51,3 +51,16 @@ def get_user(user: UserCreate):
     # Pydantic model 객체를 JSON으로 직렬화해서 응답함.
     return user_info
 
+# from fastapi import FastAPI
+
+# app = FastAPI()
+
+
+# @app.get("/")
+# def read_root():
+#     return {"Hello": "World"}
+
+
+# @app.get("/items/{item_id}")
+# def read_item(item_id: int, q: str | None = None):
+#     return {"item_id": item_id, "q": q}

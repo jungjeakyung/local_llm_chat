@@ -1,6 +1,6 @@
-import { useState } from 'react'
-import './App.css'
-import Header from "./components/Header"
+// import { useState } from 'react'
+
+import Header from "./components/Header";
 import Greeting from "./components/Greeting"
 import Counter from "./components/Counter"
 import InputState from "./components/InputState"
@@ -8,27 +8,47 @@ import ListRender from "./components/ListRender"
 import ConditionalRender from "./components/ConditionalRender"
 import UseEffectRender from "./components/UseEffectRender"
 import OllamaChat from "./components/OllamaChat"
+import { useState } from "react";
 
 function App() {
-  // const title = "로컬 LLM 채팅 앱";
+  const [selectedModel, setSelectedModel] = useState("");
 
-  return(
+  return (
+  
+
     <div>
-      {/* <h1>{title}</h1>; */}
-      <Header />
-      <OllamaChat />
+
+    <Header />
+      <>
+      {/* ★ props 전달 */}
+      <UseEffectRender
+        selectedModel={selectedModel}
+        setSelectedModel={setSelectedModel}
+      />
       <hr />
+
+      {/* ★ props 전달 */}
+      <OllamaChat selectedModel={selectedModel} />
+    </>
+
+
+      {/* <OllamaChat/> 
+      <UseEffectRender/>   */}  
+      <hr></hr>
       <Greeting />
-      <hr />
       <Counter />
       <InputState />
+      
       <ListRender />
-      <ConditionalRender />
-      <UseEffectRender />
+        
+
+      <ConditionalRender/>
+
+      
 
     </div>
-  )
+
+  );
 }
 
 export default App;
-

@@ -10,10 +10,10 @@ OLLAMA_BASE_URL = "http://localhost:11434"
 
 def call_ollama_chat(
     message: str,
-    model: str = "llama3.2:3b",
+    model: str = "gemma4:e4b",
     system_prompt: str = "너는 초보자를 돕는 친절한 AI 강사다.",
     temperature: float = 0.7,
-    top_p: float = 0.9,
+    top_p: float = 0.8,
     num_predict: int = 256,
 ):
     """LCEL 문법으로 Ollama Chat 모델을 호출하고 문자열 응답과 소요 시간을 반환한다."""

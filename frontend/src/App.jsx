@@ -62,6 +62,7 @@ function App() {
         top_p: topP,
         num_predict: numPredict,
       })
+
       setMessages((prev) => [
         ...prev,
         {

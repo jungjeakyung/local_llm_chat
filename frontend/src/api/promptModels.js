@@ -60,3 +60,4 @@ export const promptModes = {
 4. 주의사항`,
   },
 };
+

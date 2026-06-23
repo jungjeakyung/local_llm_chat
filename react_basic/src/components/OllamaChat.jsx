@@ -11,7 +11,9 @@ import axios from "axios";
 const CHAT_URL = "http://localhost:8000/chat";
 
 // Ollama 채팅 화면을 담당하는 React 컴포넌트이다.
-function OllamaChat() {
+function OllamaChat({
+  selectedModel
+}) {
   // 사용자가 textarea에 입력한 메시지를 저장하는 상태이다.
   // 초기값은 빈 문자열이다.
   const [message, setMessage] = useState("");
@@ -53,7 +55,7 @@ function OllamaChat() {
         message: message,
 
         // Ollama에서 사용할 모델명
-        model: "llama3.2:3b",
+        model: selectedModel,
 
         // 모델의 역할 또는 응답 스타일을 지정하는 시스템 프롬프트
         system_prompt: "너는 초보자를 돕는 AI 강사다.",
@@ -96,6 +98,11 @@ function OllamaChat() {
   return (
     <main className="app">
       <h1>Ollama Chat</h1>
+      <p>
+        현재 선택 모델 :
+        {selectedModel}
+      </p>
+
 
       {/* 사용자 입력 영역 */}
       <section>

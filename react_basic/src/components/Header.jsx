@@ -1,14 +1,11 @@
-function Header() {
-  return <h1>Local LLM Chat</h1>;
-}
+// 
 
-function App() {
+function Header() {
   return (
-    <div>
-      <Header />
-      <p>React 기반 프론트엔드입니다.</p>
-    </div>
+    <header>
+      <h1>React Basic</h1>
+    </header>
   );
 }
 
-export default App;
+export default Header;

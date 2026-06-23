@@ -1,8 +1,8 @@
 # 화면 UI 설계 내용
 ![alt text](image.png)
-
 # 데이터 실행 흐름도
-![alt text](image-1.png)
+frontend/doc/image-1.png
+
 
 # 기본 명령
 너는 React 프론트엔드 개발자다.
@@ -25,6 +25,7 @@ use context7
 ![alt text](image.png)
 - docs/image.png 이 위치의 이미지와 동일한 화면으로 UI를 구성한다.
 - 각 기능이 정상적으로 동작되도록 한다.
+- 첫번째 화면에서는 채팅화면의 텍스트는 없는 상태로 해
 
 # 1. 프로젝트 개요
 본 프로젝트는 React + FastAPI + Ollama 기반의 로컬 AI 채팅 애플리케이션이다.  
@@ -39,6 +40,7 @@ use context7
 - LLM Runtime: Ollama
 
 # 3. 전체 연동 구조
+```
 User Browser
   ↓
 React Frontend
@@ -48,9 +50,10 @@ FastAPI Backend
 Ollama
   ↓
 Local Language Model
+```
 
 # 4. 프론트엔드, React 컴포넌트 구조
-
+```
 src/
 ├── api/
 │   └── chatApi.js          # API 호출 로직
@@ -64,7 +67,7 @@ src/
 ├── main.jsx                # React 렌더링
 ├── App.css                 # 앱 스타일
 └── index.css               # 전역 스타일
-
+```
       
 # 5. 환경변수의 파일
 .env
@@ -80,4 +83,3 @@ backend/
 본 프로젝트의 코드 생성, 리팩터링, 오류 수정, 라이브러리 사용법 확인 시 VS Code MCP Servers에 설치된 Context7 MCP를 사용한다.
 다음 라이브러리 또는 프레임워크를 사용할 때는 반드시 Context7 MCP로 최신 공식 문서와 코드 예제를 확인한 뒤 구현한다.
 -	FastAPI, React, Vite, LangChain, Ollama
-

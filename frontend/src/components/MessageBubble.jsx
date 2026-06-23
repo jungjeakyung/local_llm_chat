@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
 
 function MessageBubble({ sender, content, model, elapsedTime }) {
   const [copied, setCopied] = useState(false)
@@ -55,9 +53,7 @@ function MessageBubble({ sender, content, model, elapsedTime }) {
           )}
         </span>
       </div>
-      <div className="message-content markdown-body">
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
-      </div>
+      <div className="message-content">{content}</div>
     </div>
   )
 }

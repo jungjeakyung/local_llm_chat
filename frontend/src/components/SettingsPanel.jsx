@@ -20,11 +20,9 @@ function SettingsPanel({
   const handlePromptModeChange = (event) => {
     const modeKey = event.target.value
     const selectedMode = promptModes[modeKey]
-
     if (!selectedMode) {
       return
     }
-
     setPromptMode(modeKey)
     onSystemPromptChange(selectedMode.prompt)
   }
@@ -51,12 +49,7 @@ function SettingsPanel({
       </label>
       <label>
         프롬프트 모드
-        <select
-          id="prompt-mode-select"
-          name="prompt_mode"
-          value={promptMode}
-          onChange={handlePromptModeChange}
-        >
+        <select value={promptMode} onChange={handlePromptModeChange}>
           {Object.entries(promptModes).map(([key, mode]) => (
             <option key={key} value={key}>
               {mode.label}
@@ -99,7 +92,7 @@ function SettingsPanel({
         <input
           type="number"
           min="16"
-          max="1024"
+          max="2048"
           step="1"
           value={numPredict}
           onChange={(event) => onNumPredictChange(Number(event.target.value))}

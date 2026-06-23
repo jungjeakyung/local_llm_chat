@@ -1,19 +1,25 @@
 import axios from "axios";
 import { useEffect, useState } from 'react'
 
-function UseEffectRender() {
+function UseEffectRender({
+  selectedModel,
+  setSelectedModel
+}) {
   // hook 초기화
   const [models, setModels] = useState([]);
-  const [selectedModel, setSelectedModel] = useState([]);
+ // const [selectedModel, setSelectedModel] = useState([]);
   const URL = "http://localhost:8000/models";
+  
+  
 
-  // fetch 함수로 비동기 처리
-  // useEffect(() => {
-  //     fetch(URL)
-  //     .then((response) => response.json())
-  //     .then((data) => setModels(data.models || []))
-  //     .catch((error) => console.error(error));
-  //   }, []);
+
+// // fetch 함수로 비동기 처리
+//   useEffect(() => {
+//       fetch(URL)
+//       .then((response) => response.json())
+//       .then((data) => setModels(data.models || []))
+//       .catch((error) => console.error(error));
+//   }, []); //[]처음 한번만 실행하는 장치
 
   // axios 라이브러리 사용하기
   // npm install axios

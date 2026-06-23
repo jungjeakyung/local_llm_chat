@@ -1,3 +1,5 @@
+# text to image : mac에서 지원함, 2026. 06.21 기준
+
 # x/z-image-turbo   Alibaba Tongyi Lab의 6B text-to-image 모델
 # x/flux2-klein   Black Forest Labs 계열 이미지 생성 모델, 4B/9B 제공
 

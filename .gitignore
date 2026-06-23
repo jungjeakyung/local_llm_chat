@@ -1,3 +1,5 @@
+node_modules/
+
 # Byte-compiled / optimized / DLL files
 node_modules/
 
@@ -218,3 +220,58 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# ===== Local LLM Project =====
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Environment
+.env
+.env.*
+
+# Node
+node_modules/
+
+# Build
+dist/
+build/
+
+# Cache
+.cache/
+.pytest_cache/
+
+# AI Models
+models/
+checkpoints/
+
+*.gguf
+*.safetensors
+*.bin
+*.pth
+*.pt
+
+# Local DB
+*.db
+*.sqlite
+*.sqlite3
+
+# Example / Study Projects
+react_basic/
+react_basic_ex/
+
+fastapi_basic/
+
+backend_ex/
+frontend_ex/
+
+# Generated Images
+ollama_basic/imgs/
+
+# IDE
+.vscode/
+.idea/

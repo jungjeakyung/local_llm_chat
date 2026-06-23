@@ -4,10 +4,12 @@ function ListRender() {
     const messages = [
         { id: 1, role: "user", content: "안녕하세요." },
         { id: 2, role: "assistant", content: "무엇을 도와드릴까요?" },
-    
     ]
+
+
+
     return (
-        <main> 
+         <main> 
             <h1>메시지 목록메시지 목록</h1>
             {
                 messages.map((message) => (
@@ -20,6 +22,7 @@ function ListRender() {
                 ))
             }
         </main>
+
     )
 }
 
